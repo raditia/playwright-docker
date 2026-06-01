@@ -1,4 +1,4 @@
-# playwright-chromium-image
+# playwright-docker
 
 Custom Docker image for running Playwright + Chromium in CI with consistent pixel rendering across macOS and Linux.
 
@@ -7,8 +7,8 @@ Custom Docker image for running Playwright + Chromium in CI with consistent pixe
 ## Image
 
 ```
-ghcr.io/raditia/playwright-chromium-image:latest
-ghcr.io/raditia/playwright-chromium-image:1.54.1
+ghcr.io/raditia/playwright-docker:latest
+ghcr.io/raditia/playwright-docker:1.54.1
 ```
 
 ## What's inside
@@ -28,7 +28,7 @@ jobs:
   visual-regression:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/raditia/playwright-chromium-image:latest
+      image: ghcr.io/raditia/playwright-docker:latest
     steps:
       - uses: actions/checkout@v4
       - run: pnpm install --frozen-lockfile
@@ -47,5 +47,5 @@ jobs:
 docker build \
   --build-arg PLAYWRIGHT_VERSION=1.54.1 \
   --build-arg PNPM_VERSION=9.15.0 \
-  -t playwright-chromium-image .
+  -t playwright-docker .
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "playwright-chromium-image",
+  "name": "playwright-docker",
   "version": "1.54.1",
   "description": "Custom Playwright + Chromium Docker image for consistent pixel rendering across OS",
   "private": true
